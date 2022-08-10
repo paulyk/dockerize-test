@@ -15,6 +15,7 @@
 }
 ```
 
+
 ### local dev
 
 ```bash
@@ -33,4 +34,10 @@ connection string
 
 ```
 Server=testbed-mssql;Database=skd;uid=sa;Password=DevDevDude119#;Connection Timeout=30
+```
+
+### docker
+
+```bash
+docker buildx build -f App.Server/Dockerfile --platform linux/arm64 -t paulyk/dockerize-1 --load .
 ```

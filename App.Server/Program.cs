@@ -13,7 +13,7 @@ builder.Services.AddSingleton<Greeter>();
 
 var app = builder.Build();
 
-var getTodo = (string id) => config[$"todo:{id}"];
+var getTodo = (string id) => config[$"todo:{id}"] != null ? config[$"todo:{id}"] : "not found";
 
 app.MapGet("/", () => "Hello World!");
 app.MapGet("/greet", (Greeter greeter) => greeter.Greet);
