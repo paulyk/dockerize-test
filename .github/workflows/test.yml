@@ -6,7 +6,10 @@ jobs:
     steps:
       - id: one
         name: step one
+        run: echo 'step one'
       - id: two
         name: step two
-      - run: echo "done"
+      - run: echo 'step two'
+      - run: echod 'step three'
+
 
