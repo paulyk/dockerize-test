@@ -1,0 +1,12 @@
+name: first
+on: [push]
+jobs:
+  a-job:
+    runs-on: ubuntu-latest
+    steps:
+      - id: one
+        name: step one
+      - id: two
+        name: step two
+      - run: echo "done"
+
