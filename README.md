@@ -41,3 +41,4 @@ Server=testbed-mssql;Database=skd;uid=sa;Password=DevDevDude119#;Connection Time
 ```bash
 docker buildx build -f App.Server/Dockerfile --platform linux/arm64 -t paulyk/dockerize-1 --load .
 ```
+
