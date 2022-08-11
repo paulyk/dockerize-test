@@ -1,16 +1,29 @@
 name: Github action demo
 on: [push]
 jobs:
-  Explore-Github-Actins:
+  first-job:
     runs-on: ubuntu-latest
-    steps: 
-      - run: echo "this is the first"
-      - run: echo "😗 second 😜"
-      - name: checkout code
-        uses: actions/checkout@v3
-      - run: echo "The repo ${{ github.repository }} has been cloned"
-      - name: List files in repository
-        run: |
-          ls ${{ github.workspace }}
-      - run: echo "The job status ${{ job.status }}"
+    steps:
+      - run: echo 🚀 first 
+      - run: echo 😎 cool
+  second-job:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 💁🏽
+
+# name: Github action demo
+# on: [push]
+# jobs:
+#   Explore-Github-Actins:
+#     runs-on: ubuntu-latest
+#     steps: 
+#       - run: echo "this is the first"
+#       - run: echo "😗 second 😜"
+#       - name: checkout code
+#         uses: actions/checkout@v3
+#       - run: echo "The repo ${{ github.repository }} has been cloned"
+#       - name: List files in repository
+#         run: |
+#           ls ${{ github.workspace }}
+#       - run: echo "The job status ${{ job.status }}"
     
