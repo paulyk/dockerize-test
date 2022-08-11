@@ -8,7 +8,7 @@ jobs:
     steps:
       - 
         name: first step
-        run: echo hello ${{ secrets.DOCKER_HUB_USERNAME }}
+        run: echo "hello ${{ secrets.DOCKER_HUB_USERNAME }}"
       - 
         name: second step
-        run: echo done
+        run: echo "The workflow is done"
