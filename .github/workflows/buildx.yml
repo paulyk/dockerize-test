@@ -13,4 +13,5 @@ jobs:
           echo ${{ secrets.DOCKER_HUB_USERNAME }}
       - 
         name: second step
-        run: echo "The workflow is done"
+        run: |
+          echo ${{ secrets.TOKEN }} token
