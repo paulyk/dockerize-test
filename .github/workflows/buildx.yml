@@ -21,6 +21,12 @@ jobs:
         with:
           install: true
       -
-        name: Build
-        run: |
-          docker build  -f App.Server/Dockerfile --platform linux/arm64,linux/amd64 -t paulyk/dockerize-1 --push .
+        name: Build and push
+        uses: docker/build-push-action@v3
+        with:
+          file: App.Server/Dockerfile
+          platforms: linux/arm64,linux/amd64
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/dockerize-1:latest
+          push: true
+
+#          docker build  -f App.Server/Dockerfile --platform linux/arm64,linux/amd64 -t paulyk/dockerize-1 --push .

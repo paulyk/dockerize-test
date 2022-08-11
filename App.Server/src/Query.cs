@@ -12,9 +12,7 @@ public class Query {
             Title = "C# in depth.",
         };
 
-    public List<Book> GetBooks() => new List<Book> {
-        new Book { Title = "Anitifragile"},
-    };
     public List<Book> GetBooks2([Service] DataDb db) => db.GetBooks();
+    public List<Author> GetAuthors([Service] DataDb db) => db.GetAuthors();
 
 }
