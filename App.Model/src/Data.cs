@@ -10,6 +10,7 @@ public class DataDb {
         new Book { Title = "Anitifragile"},
         new Book { Title = "The Black Swan"},
         new Book { Title = "Fooled by randomness"},
+        new Book { Title = "The Selfish Gene"},
     };
     public List<Author> GetAuthors() =>  new List<Author> {
         new Author { Name = "Nassim Nicholas Taleb"},
